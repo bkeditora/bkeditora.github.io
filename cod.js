@@ -15,6 +15,7 @@ function calculaValor(){
    var multi = 1;
 
    preco = 0.1*form.elements["pb"].value;
+   preco += 0.5 * form.elements["cor"].value ;
 
    if(form.elements["Tamanho"][1].selected){
       preco=preco*1.5;
@@ -36,8 +37,7 @@ function calculaValor(){
       }
    }
 
-   preco += 0.5 * form.elements["cor"].value +2;
-   preco *= multi;
+   preco = preco*multi +2;
 
    var divobj = document.getElementById('valuni');
    divobj.style.display='block';
