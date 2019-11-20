@@ -22,7 +22,7 @@
                     <a href="http://bkeditora.com">BKEditora</a>
                 </h1>
 
-                <p class="lead">Preencha com as informações de seu livro e aperte OK. O site mostrará o valor do orçamento</p>
+                <p class="lead">Preencha com as informações de seu livro. O site mostrará o valor do orçamento</p>
 
 
                 <form id="orcamento" method="post" onsubmit="return false;" role="form">
@@ -66,7 +66,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="Orelha">Tipo da capa</label>
-                                    <select id="Orelha" name="Orelha" class="form-control" required="required" data-error="Escolha o tipo da capa">
+                                    <select id="Orelha" name="Orelha" class="form-control" required="required" data-error="Escolha o tipo da capa" onchange="calculaValor()">
                                         <option value="Sem Orelha">Sem Orelha</option>
                                         <option value="Com Orelha">Com Orelha</option>
                                     </select>
@@ -78,9 +78,9 @@
                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="Papel">Tipo de Papel</label>
-                                    <select id="Papel" name="Papel" class="form-control" required="required" data-error="Escolha o tipo da capa">
-                                        <option value="avena">Papel Avena</option>
+                                    <select id="Papel" name="Papel" class="form-control" required="required" data-error="Escolha o tipo da capa" onchange="calculaValor()">
                                         <option value="comum">Papel Comum</option>
+                                        <option value="avena">Papel Avena</option>
                                     </select>
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -88,7 +88,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="Tamanho">Tamanho</label>
-                                    <select id="Tamanho" name="Tamanho" class="form-control" required="required" data-error="Escolha o tipo da capa">
+                                    <select id="Tamanho" name="Tamanho" class="form-control" required="required" data-error="Escolha o tipo da capa" onchange="calculaValor()">
                                         <option value="peq">14x20 ou 12x19</option>
                                         <option value="grande">16x23 ou 19x28</option>
                                     </select>
